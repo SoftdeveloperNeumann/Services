@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         startService(intent);
         finish();
     }
+    @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions,
                                            int[] grantResults){
         switch (requestCode) {
