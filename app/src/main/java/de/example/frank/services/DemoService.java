@@ -9,6 +9,7 @@ import android.os.IBinder;
 import android.provider.CallLog;
 import android.provider.CallLog.Calls;
 import android.util.Log;
+import android.widget.Toast;
 
 public class DemoService extends Service {
 
@@ -18,6 +19,7 @@ public class DemoService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+
         Log.d(TAG, "onBind()");
         return null;
     }
@@ -33,7 +35,10 @@ public class DemoService extends Service {
                 // Zahl der verpassten Anrufe ausgeben
                 int missedCalls = getMissedCalls();
                 Log.d(TAG, missedCalls + " verpasste Anrufe");
+                Toast.makeText(DemoService.this, missedCalls+" verpasste Anrufe", Toast.LENGTH_LONG).show();
+
             }
+
         };
         getContentResolver().registerContentObserver(CallLog.Calls.CONTENT_URI,
                 false, contentObserver);
