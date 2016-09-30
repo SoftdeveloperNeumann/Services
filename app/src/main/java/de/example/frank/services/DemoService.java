@@ -37,6 +37,7 @@ public class DemoService extends Service {
                 Log.d(TAG, missedCalls + " verpasste Anrufe");
                 Toast.makeText(DemoService.this, missedCalls+" verpasste Anrufe", Toast.LENGTH_LONG).show();
 
+
             }
 
         };

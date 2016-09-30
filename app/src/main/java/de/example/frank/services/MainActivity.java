@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                     2);
 
         }
-        Intent intent = new Intent(this,DemoService.class);
+        Intent intent = new Intent(this,TimeService.class);
         startService(intent);
         finish();
     }
